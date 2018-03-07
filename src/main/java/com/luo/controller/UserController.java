@@ -72,7 +72,8 @@ public class UserController {
     /**
      * 验证用户名和密码
      *
-     * @param String username,String password
+     * @param  username
+     * @param  password
      * @return
      */
     @RequestMapping(value = "/checkLogin.json", method = RequestMethod.POST)

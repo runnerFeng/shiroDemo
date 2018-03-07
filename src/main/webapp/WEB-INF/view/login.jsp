@@ -20,14 +20,14 @@ password: <input type="password" id="password"><br><br>
             data: param,
             dataType: "json",
             success: function (data) {
-                if (data.success == false) {
+                if (false === data.success) {
                     alert(data.errorMsg);
                 } else {
                     //登录成功
                     window.location.href = "<%=request.getContextPath()%>" + "/loginsuccess.jhtml";
                 }
             },
-            error: function (data) {
+            error: function () {
                 alert("调用失败....");
             }
         });

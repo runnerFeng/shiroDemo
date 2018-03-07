@@ -16,13 +16,13 @@
             dataType: "json",
             contentType: "application/json",
             success: function (data) {
-                if (data.success == false) {
-                    alert(data.errorMsg);
-                } else {
+                if (data.success !== false) {
                     alert("请求成功无异常");
+                } else {
+                    alert(data.errorMsg);
                 }
             },
-            error: function (data) {
+            error: function () {
                 alert("调用失败....");
             }
         });
@@ -36,13 +36,13 @@
             dataType: "json",
             contentType: "application/json",
             success: function (data) {
-                if (data.success == false) {
+                if (false === data.success) {
                     alert(data.errorMsg);
                 } else {
                     alert("请求成功无异常");
                 }
             },
-            error: function (data) {
+            error: function () {
                 alert("调用失败....");
             }
         });
